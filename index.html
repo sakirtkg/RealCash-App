@@ -113,6 +113,41 @@
       margin-top: 10px;
     }
   </style>
+
+<style>
+  .money {
+    position: fixed;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://i.ibb.co/yYdpMhP/money.png');
+    background-size: cover;
+    animation: fall linear infinite;
+    z-index: 999;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    for (let i = 0; i < 30; i++) {
+      let money = document.createElement("div");
+      money.className = "money";
+      money.style.left = Math.random() * 100 + "vw";
+      money.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(money);
+    }
+  });
+</script>
 </head>
 <body>
 
