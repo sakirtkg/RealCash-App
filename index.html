@@ -10,9 +10,16 @@
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('https://i.ibb.co/QmvVrGy/casino-bg.jpg');
-      background-size: cover;
-      background-position: center;
+      background-color: black;
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 102, 102, 0.05) 0,
+        rgba(255, 102, 102, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+      ),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><text x="0" y="20" font-size="20" fill="rgba(255,102,102,0.1)">Real Cash</text></svg>');
+      background-repeat: repeat;
       color: white;
       text-align: center;
     }
@@ -22,6 +29,14 @@
       font-size: 2.8em;
       margin-top: 30px;
       animation: glow 1.5s infinite alternate;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 img {
+      width: 40px;
+      height: 40px;
     }
 
     @keyframes glow {
@@ -34,7 +49,6 @@
     }
 
     .button {
-      background: linear-gradient(to right, #ff0000, #ff4d4d);
       border: none;
       color: white;
       padding: 15px 30px;
@@ -47,7 +61,19 @@
     }
 
     .button:hover {
-      background: linear-gradient(to right, #cc0000, #ff1a1a);
+      opacity: 0.9;
+    }
+
+    .btn-bengalbet {
+      background: linear-gradient(to right, #006400, #00cc44);
+    }
+
+    .btn-mcw {
+      background: linear-gradient(to right, #0000cc, #3366ff);
+    }
+
+    .btn-superbaji {
+      background: linear-gradient(to right, #660066, #cc33ff);
     }
 
     @keyframes shake {
@@ -62,22 +88,7 @@
       font-size: 18px;
       margin-top: 40px;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .reg-msg {
-      font-size: 20px;
-      color: #ffffff;
-      margin-bottom: 15px;
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .chat-button {
@@ -95,22 +106,23 @@
       70% { box-shadow: 0 0 0 10px rgba(0,255,204, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0,255,204, 0); }
     }
+
+    .reg-msg {
+      font-size: 20px;
+      color: #ffffff;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Real Cash</h1>
-
-  <button class="button" onclick="window.location.href='https://jeetbangla.online/af/0ax2jNU6/join'">🎯 JeetBangla</button>
-  <button class="button" onclick="window.location.href='https://bgb552291492aff.com/af/Lv5lgvX1/join'">🔥 BengalBet</button>
-  <button class="button" onclick="window.location.href='https://www.casinomcw.com/af/UnY2xp17/Welcome'">💸 MCW</button>
-  <button class="button" onclick="window.location.href='https://jeetway.me/af/so1W4ay3/join'">🚀 JeetWay</button>
-  <button class="button" onclick="window.location.href='https://superbaji.fun/af/XLrC8uwC/join'">🏆 Superbaji</button>
-  <button class="button" onclick="window.location.href='https://bnwnaff332244.com/af/Q3wfx9x5/join'">🎁 BanglaWin</button>
+  <h1><img src="https://i.ibb.co/ZzPjHZx/cash-icon.png" alt="logo"> Real Cash</h1>
+  <div class="reg-msg">রেজিস্টার করতে নিচে ট্যাপ করুন</div>
 
   <br><br>
-  <button class="button" onclick="window.location.href='https://jeetbangla.online/af/0ax2jNU6/join'">📥 Register Now</button>
-  <div class="reg-msg">রেজিস্টার করতে নিচে ট্যাপ করুন</div>
+  <button class="button btn-bengalbet" onclick="window.location.href='https://bgb552291492aff.com/af/Lv5lgvX1/join'">🔥 BengalBet</button>
+  <button class="button btn-mcw" onclick="window.location.href='https://www.casinomcw.com/af/UnY2xp17/Welcome'">💸 MCW</button>
+  <button class="button btn-superbaji" onclick="window.location.href='https://superbaji.fun/af/XLrC8uwC/join'">🏆 Superbaji</button>
 
   <br>
   <button class="chat-button" onclick="window.location.href='https://t.me/Realcashapperan'">💬 Live Chat Support</button>
