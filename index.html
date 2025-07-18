@@ -9,6 +9,8 @@
       margin: 0;
       padding: 0;
       background-color: #000;
+      background-image: repeating-linear-gradient(45deg, rgba(255,0,0,0.02) 0, rgba(255,0,0,0.02) 1px, transparent 1px, transparent 20px), 
+                        repeating-linear-gradient(-45deg, rgba(255,0,0,0.02) 0, rgba(255,0,0,0.02) 1px, transparent 1px, transparent 20px);
       font-family: 'Arial', sans-serif;
       color: white;
       overflow: hidden;
@@ -22,13 +24,15 @@
       font-size: 40px;
     }
 
-    .logo {
+    .register-text {
       text-align: center;
-      margin-top: 10px;
+      font-size: 18px;
+      color: #fff;
+      margin-top: -10px;
     }
 
-    .logo img {
-      width: 80px;
+    .logo {
+      display: none;
     }
 
     .links {
@@ -38,85 +42,118 @@
 
     .links a {
       display: inline-block;
-      background: linear-gradient(to right, #ff0000, #cc0000);
-      color: #fff;
       padding: 15px 30px;
       margin: 10px;
       border-radius: 10px;
       text-decoration: none;
       font-size: 20px;
+      font-weight: bold;
       animation: blink 1s infinite;
     }
 
+    .mcw { background-color: #ff4d4d; color: white; }
+    .jeetbangla { background-color: #4CAF50; color: white; }
+    .bengalbet { background-color: #2196F3; color: white; }
+    .jeetway { background-color: #FF9800; color: white; }
+    .superbaji { background-color: #9C27B0; color: white; }
+    .banglawin { background-color: #00BCD4; color: white; }
+
     @keyframes blink {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+      50% { opacity: 0.7; }
     }
 
     .bonus {
       text-align: center;
       margin-top: 20px;
       font-size: 18px;
-      color: #ffff66;
+      color: #ffffff;
+      border: 2px solid #ff4d4d;
+      padding: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      background-color: rgba(255,255,255,0.05);
     }
 
-    .money {
+    .money, .text-rain {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('https://i.ibb.co/VvqL5WV/money.png');
-      background-size: cover;
+      width: auto;
+      height: auto;
+      color: rgba(255,255,255,0.07);
+      font-size: 20px;
       animation: fall linear infinite;
+      white-space: nowrap;
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(-100px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    /* Telegram Button */
+    .telegram {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+      text-align: center;
+    }
+
+    .telegram a {
+      display: block;
+      text-decoration: none;
+      color: white;
+    }
+
+    .telegram span {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
   <h1>Real Cash</h1>
-  <div class="logo">
-    <img src="https://i.ibb.co/yV6xvVv/casino.png" alt="Logo">
+  <div class="register-text">
+    📲 রেজিস্টার করতে নিচের বাটনে ট্যাপ করুন
   </div>
 
   <div class="links">
-    <a href="https://www.casinomcw.com/af/UnY2xp17/Welcome" target="_blank">MCW</a>
-    <a href="https://jeetbangla.online/af/0ax2jNU6/join" target="_blank">JeetBangla</a>
-    <a href="https://bgb552291492aff.com/af/Lv5lgvX1/join" target="_blank">BengalBet</a>
-    <a href="https://jeetway.me/af/so1W4ay3/join" target="_blank">JeetWay</a>
-    <a href="https://superbaji.fun/af/XLrC8uwC/join" target="_blank">SuperBaji</a>
-    <a href="https://bnwnaff332244.com/af/Q3wfx9x5/join" target="_blank">BanglaWin</a>
+    <a href="https://www.casinomcw.com/af/UnY2xp17/Welcome" target="_blank" class="mcw">MCW</a>
+    <a href="https://jeetbangla.online/af/0ax2jNU6/join" target="_blank" class="jeetbangla">JeetBangla</a>
+    <a href="https://bgb552291492aff.com/af/Lv5lgvX1/join" target="_blank" class="bengalbet">BengalBet</a>
+    <a href="https://jeetway.me/af/so1W4ay3/join" target="_blank" class="jeetway">JeetWay</a>
+    <a href="https://superbaji.fun/af/XLrC8uwC/join" target="_blank" class="superbaji">SuperBaji</a>
+    <a href="https://bnwnaff332244.com/af/Q3wfx9x5/join" target="_blank" class="banglawin">BanglaWin</a>
   </div>
 
   <div class="bonus">
-    📢 রেজিস্ট্রেশনের পর মোবাইল ও ইমেইল ভেরিফাই করুন এবং আপনার অ্যাকাউন্টে বোনাস পান! <br>
-    প্রতিদিন ইনকাম করার সুযোগ হাতছাড়া করবেন না!
+    🎁 রেজিস্ট্রেশনের পর মোবাইল ও ইমেইল ভেরিফাই করুন এবং বোনাস নিন!
   </div>
 
+  <!-- Background Real Cash Text -->
   <script>
-    function createMoneyRain() {
-      const money = document.createElement('div');
-      money.classList.add('money');
-      money.style.left = Math.random() * window.innerWidth + 'px';
-      money.style.animationDuration = (2 + Math.random() * 3) + 's';
-      document.body.appendChild(money);
-      setTimeout(() => money.remove(), 5000);
+    function createFallingText() {
+      const texts = ["MCW", "SUPERBAJI", "JEETBANGLA", "BANGLAWIN", "JEETWAY", "BENGALBET"];
+      const rain = document.createElement('div');
+      rain.classList.add('text-rain');
+      rain.style.left = Math.random() * window.innerWidth + 'px';
+      rain.style.top = '-20px';
+      rain.style.animationDuration = (2 + Math.random() * 3) + 's';
+      rain.innerText = texts[Math.floor(Math.random() * texts.length)];
+      document.body.appendChild(rain);
+      setTimeout(() => rain.remove(), 5000);
     }
-    setInterval(createMoneyRain, 200);
+    setInterval(createFallingText, 300);
   </script>
 
   <!-- Telegram Chat Button -->
-  <div style="position: fixed; bottom: 20px; left: 20px; z-index:999;">
+  <div class="telegram">
     <a href="https://t.me/Realcashapperan" target="_blank">
       <img src="https://i.ibb.co/HCYVcD0/telegram-icon.png" width="60" alt="Chat on Telegram">
+      <span>Live Chat Support</span>
     </a>
   </div>
 </body>
