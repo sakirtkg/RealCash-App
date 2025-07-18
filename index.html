@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -9,165 +8,116 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #000;
       font-family: 'Arial', sans-serif;
-      background-color: black;
-      background-image: repeating-linear-gradient(
-        45deg,
-        rgba(255, 102, 102, 0.05) 0,
-        rgba(255, 102, 102, 0.05) 1px,
-        transparent 1px,
-        transparent 20px
-      ),
-      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><text x="0" y="20" font-size="20" fill="rgba(255,102,102,0.1)">Real Cash</text></svg>');
-      background-repeat: repeat;
       color: white;
-      text-align: center;
+      overflow: hidden;
+      position: relative;
     }
 
     h1 {
-      color: #ff6666;
-      font-size: 2.8em;
-      margin-top: 30px;
-      animation: glow 1.5s infinite alternate;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    h1 img {
-      width: 40px;
-      height: 40px;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #ff9999, 0 0 10px #ffcccc;
-      }
-      to {
-        text-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff9999;
-      }
-    }
-
-    .button {
-      border: none;
-      color: white;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 20px;
-      border-radius: 12px;
-      cursor: pointer;
-      animation: shake 1s infinite;
-      display: inline-block;
-    }
-
-    .button:hover {
-      opacity: 0.9;
-    }
-
-    .btn-bengalbet {
-      background: linear-gradient(to right, #006400, #00cc44);
-    }
-
-    .btn-mcw {
-      background: linear-gradient(to right, #0000cc, #3366ff);
-    }
-
-    .btn-superbaji {
-      background: linear-gradient(to right, #660066, #cc33ff);
-    }
-
-    @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-3px); }
-      50% { transform: translateX(3px); }
-      75% { transform: translateX(-3px); }
-      100% { transform: translateX(0); }
-    }
-
-    .footer-bn {
-      font-size: 18px;
+      color: #ff4d4d;
+      text-align: center;
       margin-top: 40px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
+      font-size: 40px;
     }
 
-    .chat-button {
-      background-color: #00cc99;
-      padding: 15px 30px;
-      margin-top: 20px;
-      font-size: 20px;
-      border: none;
-      border-radius: 10px;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0,255,204, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(0,255,204, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0,255,204, 0); }
-    }
-
-    .reg-msg {
-      font-size: 20px;
-      color: #ffffff;
+    .logo {
+      text-align: center;
       margin-top: 10px;
     }
+
+    .logo img {
+      width: 80px;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .links a {
+      display: inline-block;
+      background: linear-gradient(to right, #ff0000, #cc0000);
+      color: #fff;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 20px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .bonus {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ffff66;
+    }
+
+    .money {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('https://i.ibb.co/VvqL5WV/money.png');
+      background-size: cover;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
   </style>
-
-<style>
-  .money {
-    position: fixed;
-    top: -50px;
-    width: 30px;
-    height: 30px;
-    background-image: url('https://i.ibb.co/yYdpMhP/money.png');
-    background-size: cover;
-    animation: fall linear infinite;
-    z-index: 999;
-  }
-
-  @keyframes fall {
-    0% {
-      transform: translateY(-100px) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(110vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    for (let i = 0; i < 30; i++) {
-      let money = document.createElement("div");
-      money.className = "money";
-      money.style.left = Math.random() * 100 + "vw";
-      money.style.animationDuration = (2 + Math.random() * 3) + "s";
-      document.body.appendChild(money);
-    }
-  });
-</script>
 </head>
 <body>
-
-  <h1><img src="https://i.ibb.co/ZzPjHZx/cash-icon.png" alt="logo"> Real Cash</h1>
-  <div class="reg-msg">রেজিস্টার করতে নিচে ট্যাপ করুন</div>
-
-  <br><br>
-  <button class="button btn-bengalbet" onclick="window.location.href='https://bgb552291492aff.com/af/Lv5lgvX1/join'">🔥 BengalBet</button>
-  <button class="button btn-mcw" onclick="window.location.href='https://www.casinomcw.com/af/UnY2xp17/Welcome'">💸 MCW</button>
-  <button class="button btn-superbaji" onclick="window.location.href='https://superbaji.fun/af/XLrC8uwC/join'">🏆 Superbaji</button>
-
-  <br>
-  <button class="chat-button" onclick="window.location.href='https://t.me/Realcashapperan'">💬 Live Chat Support</button>
-
-  <div class="footer-bn">
-    👉 একাউন্ট খুলেই পাচ্ছেন ২০০% বোনাস!<br>
-    📱 মোবাইল নম্বর ও ইমেইল ভেরিফাই করুন<br>
-    🎁 রোজ ইনকাম করার সুযোগ<br>
-    🧾 নিজের বিকাশ/নগদ নাম্বারে টাকা তুলুন সহজেই
+  <h1>Real Cash</h1>
+  <div class="logo">
+    <img src="https://i.ibb.co/yV6xvVv/casino.png" alt="Logo">
   </div>
 
+  <div class="links">
+    <a href="https://www.casinomcw.com/af/UnY2xp17/Welcome" target="_blank">MCW</a>
+    <a href="https://jeetbangla.online/af/0ax2jNU6/join" target="_blank">JeetBangla</a>
+    <a href="https://bgb552291492aff.com/af/Lv5lgvX1/join" target="_blank">BengalBet</a>
+    <a href="https://jeetway.me/af/so1W4ay3/join" target="_blank">JeetWay</a>
+    <a href="https://superbaji.fun/af/XLrC8uwC/join" target="_blank">SuperBaji</a>
+    <a href="https://bnwnaff332244.com/af/Q3wfx9x5/join" target="_blank">BanglaWin</a>
+  </div>
+
+  <div class="bonus">
+    📢 রেজিস্ট্রেশনের পর মোবাইল ও ইমেইল ভেরিফাই করুন এবং আপনার অ্যাকাউন্টে বোনাস পান! <br>
+    প্রতিদিন ইনকাম করার সুযোগ হাতছাড়া করবেন না!
+  </div>
+
+  <script>
+    function createMoneyRain() {
+      const money = document.createElement('div');
+      money.classList.add('money');
+      money.style.left = Math.random() * window.innerWidth + 'px';
+      money.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(money);
+      setTimeout(() => money.remove(), 5000);
+    }
+    setInterval(createMoneyRain, 200);
+  </script>
+
+  <!-- Telegram Chat Button -->
+  <div style="position: fixed; bottom: 20px; left: 20px; z-index:999;">
+    <a href="https://t.me/Realcashapperan" target="_blank">
+      <img src="https://i.ibb.co/HCYVcD0/telegram-icon.png" width="60" alt="Chat on Telegram">
+    </a>
+  </div>
 </body>
 </html>
