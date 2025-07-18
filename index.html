@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -9,10 +10,27 @@
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      background: #000;
+      background-color: #000;
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 20px), 
+                        repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 20px);
       overflow-x: hidden;
-      position: relative;
       color: white;
+      position: relative;
+    }
+
+    .falling-text {
+      position: absolute;
+      top: -50px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #00ff00;
+      animation: rain 5s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rain {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
     }
 
     h1 {
@@ -20,22 +38,6 @@
       margin-top: 20px;
       color: #ffcc00;
       font-size: 36px;
-    }
-
-    .money {
-      position: absolute;
-      top: -50px;
-      width: 50px;
-      height: 50px;
-      background-image: url('https://i.ibb.co/6RjfcxL/money.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: rain 5s linear infinite;
-    }
-
-    @keyframes rain {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
     }
 
     .container {
@@ -64,7 +66,6 @@
       width: 80%;
       margin: 10px auto;
       padding: 12px;
-      background-color: #ff0000;
       color: white;
       border: none;
       border-radius: 8px;
@@ -73,6 +74,13 @@
       animation: pulse 2s infinite;
       text-decoration: none;
     }
+
+    .button:nth-child(1) { background-color: #e60000; }
+    .button:nth-child(2) { background-color: #ff8000; }
+    .button:nth-child(3) { background-color: #009900; }
+    .button:nth-child(4) { background-color: #0066cc; }
+    .button:nth-child(5) { background-color: #8000ff; }
+    .button:nth-child(6) { background-color: #ff1493; }
 
     @keyframes pulse {
       0% { transform: scale(1); opacity: 1; }
@@ -83,32 +91,32 @@
     .support {
       margin-top: 20px;
       font-size: 16px;
+      border: 2px solid #87CEEB;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: #87CEEB;
+      font-weight: bold;
     }
 
-    .support a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    /* Multiple money drops */
-    .money:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .money:nth-child(2) { left: 30%; animation-delay: 1s; }
-    .money:nth-child(3) { left: 50%; animation-delay: 2s; }
-    .money:nth-child(4) { left: 70%; animation-delay: 3s; }
-    .money:nth-child(5) { left: 85%; animation-delay: 1.5s; }
-    .money:nth-child(6) { left: 40%; animation-delay: 2.5s; }
+    .falling-text:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .falling-text:nth-child(2) { left: 25%; animation-delay: 1s; }
+    .falling-text:nth-child(3) { left: 40%; animation-delay: 2s; }
+    .falling-text:nth-child(4) { left: 55%; animation-delay: 3s; }
+    .falling-text:nth-child(5) { left: 70%; animation-delay: 1.5s; }
+    .falling-text:nth-child(6) { left: 85%; animation-delay: 2.5s; }
 
   </style>
 </head>
 <body>
 
-  <!-- Takar Bristy Animation -->
-  <div class="money"></div>
-  <div class="money"></div>
-  <div class="money"></div>
-  <div class="money"></div>
-  <div class="money"></div>
-  <div class="money"></div>
+  <!-- Falling text instead of image rain -->
+  <div class="falling-text">MCW</div>
+  <div class="falling-text">JeetBangla</div>
+  <div class="falling-text">JetWay</div>
+  <div class="falling-text">SuperBaji</div>
+  <div class="falling-text">BanglaWin</div>
+  <div class="falling-text">BengalBet</div>
 
   <h1>Real Cash</h1>
 
@@ -132,7 +140,7 @@
 
     <!-- Live Support -->
     <div class="support">
-      💬 লাইভ সাপোর্ট: <a href="https://t.me/Realcashapperan" target="_blank">এখানে ট্যাপ করুন</a>
+      💬 লাইভ সাপোর্ট
     </div>
   </div>
 
